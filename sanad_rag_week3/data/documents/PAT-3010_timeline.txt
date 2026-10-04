@@ -1,0 +1,32 @@
+## Encounter -- 2021-05-10
+Patient PAT-3010 presented to Dr. Dina Shawky (Nephrology) with swelling in the ankles and fatigue. Assessment: suspected chronic kidney disease. Plan: order eGFR Panel, start Lisinopril 10mg, follow-up in 6 weeks.
+
+## Prescription -- 2021-05-10
+Prescribed by Dr. Dina Shawky: Lisinopril 10mg, ongoing, for management of chronic kidney disease.
+
+## Laboratory Result -- 2021-05-10
+Lab order: eGFR Panel, ordered by Dr. Dina Shawky for PAT-3010. Result summary: eGFR = 47 mL/min/1.73m2. Report status: final. Report filed as document LAB-PAT-3010-0 in private storage.
+
+## Encounter -- 2021-08-20
+Follow-up with Dr. Dina Shawky. Patient tolerating therapy on Lisinopril 10mg. Assessment: chronic kidney disease, improving. Plan: continue current regimen, repeat eGFR Panel at next visit.
+
+## Laboratory Result -- 2021-08-20
+Lab order: eGFR Panel, ordered by Dr. Dina Shawky for PAT-3010. Result summary: eGFR = 51 mL/min/1.73m2. Report status: final. Report filed as document LAB-PAT-3010-1 in private storage.
+
+## Encounter -- 2022-08-10
+Follow-up with Dr. Dina Shawky. Patient reports improvement on Lisinopril 10mg. Assessment: chronic kidney disease, improving. Plan: continue current regimen, repeat eGFR Panel at next visit.
+
+## Laboratory Result -- 2022-08-10
+Lab order: eGFR Panel, ordered by Dr. Dina Shawky for PAT-3010. Result summary: eGFR = 53 mL/min/1.73m2. Report status: final. Report filed as document LAB-PAT-3010-2 in private storage.
+
+## Encounter -- 2022-11-10
+Follow-up with Dr. Dina Shawky. Patient reports improvement on Lisinopril 10mg. Assessment: chronic kidney disease, improving. Plan: continue current regimen, repeat eGFR Panel at next visit.
+
+## Laboratory Result -- 2022-11-10
+Lab order: eGFR Panel, ordered by Dr. Dina Shawky for PAT-3010. Result summary: eGFR = 62 mL/min/1.73m2. Report status: final. Report filed as document LAB-PAT-3010-3 in private storage.
+
+## Encounter -- 2022-11-20
+Follow-up with Dr. Dina Shawky. Patient reports improvement on Lisinopril 10mg. Assessment: chronic kidney disease, well controlled. Plan: continue current regimen, repeat eGFR Panel at next visit.
+
+## Laboratory Result -- 2022-11-20
+Lab order: eGFR Panel, ordered by Dr. Dina Shawky for PAT-3010. Result summary: eGFR = 71 mL/min/1.73m2. Report status: final. Report filed as document LAB-PAT-3010-4 in private storage.

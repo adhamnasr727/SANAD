@@ -1,0 +1,32 @@
+## Encounter -- 2021-02-10
+Patient PAT-3015 presented to Dr. Omar Sameh (Gastroenterology) with frequent heartburn and regurgitation. Assessment: suspected gerd. Plan: order Endoscopy Severity Grading, start Omeprazole 40mg, follow-up in 6 weeks.
+
+## Prescription -- 2021-02-10
+Prescribed by Dr. Omar Sameh: Omeprazole 40mg, ongoing, for management of gerd.
+
+## Laboratory Result -- 2021-02-10
+Lab order: Endoscopy Severity Grading, ordered by Dr. Omar Sameh for PAT-3015. Result summary: LA grade = LA Grade C. Report status: final. Report filed as document LAB-PAT-3015-0 in private storage.
+
+## Encounter -- 2021-02-20
+Follow-up with Dr. Omar Sameh. Patient tolerating therapy on Omeprazole 40mg. Assessment: gerd, improving. Plan: continue current regimen, repeat Endoscopy Severity Grading at next visit.
+
+## Laboratory Result -- 2021-02-20
+Lab order: Endoscopy Severity Grading, ordered by Dr. Omar Sameh for PAT-3015. Result summary: LA grade = LA Grade B. Report status: final. Report filed as document LAB-PAT-3015-1 in private storage.
+
+## Encounter -- 2021-05-20
+Follow-up with Dr. Omar Sameh. Patient reports improvement on Omeprazole 40mg. Assessment: gerd, improving. Plan: continue current regimen, repeat Endoscopy Severity Grading at next visit.
+
+## Laboratory Result -- 2021-05-20
+Lab order: Endoscopy Severity Grading, ordered by Dr. Omar Sameh for PAT-3015. Result summary: LA grade = LA Grade B. Report status: final. Report filed as document LAB-PAT-3015-2 in private storage.
+
+## Encounter -- 2022-05-10
+Follow-up with Dr. Omar Sameh. Patient reports improvement on Omeprazole 40mg. Assessment: gerd, improving. Plan: continue current regimen, repeat Endoscopy Severity Grading at next visit.
+
+## Laboratory Result -- 2022-05-10
+Lab order: Endoscopy Severity Grading, ordered by Dr. Omar Sameh for PAT-3015. Result summary: LA grade = LA Grade A. Report status: final. Report filed as document LAB-PAT-3015-3 in private storage.
+
+## Encounter -- 2023-05-20
+Follow-up with Dr. Omar Sameh. Patient reports improvement on Omeprazole 40mg. Assessment: gerd, well controlled. Plan: continue current regimen, repeat Endoscopy Severity Grading at next visit.
+
+## Laboratory Result -- 2023-05-20
+Lab order: Endoscopy Severity Grading, ordered by Dr. Omar Sameh for PAT-3015. Result summary: LA grade = LA Grade A (healed). Report status: final. Report filed as document LAB-PAT-3015-4 in private storage.

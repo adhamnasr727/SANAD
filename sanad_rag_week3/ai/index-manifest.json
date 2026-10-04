@@ -1,0 +1,113 @@
+{
+  "index_name": "sanad-patient-rag-index",
+  "version": "0.1.0",
+  "owner": "AI/RAG Engineering",
+  "project": "SANAD",
+  "description": "Vector index manifest for the private patient RAG service. Every vector chunk in this index MUST carry the metadata_schema fields below in full. patient_id is the mandatory hard-isolation filter key.",
+  "chunking_strategy": {
+    "selected": "semantic_document_aware",
+    "rationale_doc": "ai/chunking-experiment.md",
+    "fallback": "fixed_token_window",
+    "fallback_condition": "Used only when a source document has no machine-detectable clinical record structure (e.g. unstructured free-text notes, scanned PDFs without OCR-derived section boundaries). Fallback chunks MUST still populate every metadata_schema field; record_type and date may be set to 'unknown' and null respectively when they cannot be determined, and is_multi_event MUST be computed and set to true whenever more than one detectable record boundary falls inside the chunk."
+  },
+  "ranking_policy": {
+    "rule": "Similarity ranking alone MUST NOT be trusted for time-sensitive queries (e.g. 'most recent X', 'latest result', 'current dose'). For these, the retriever MUST re-rank the similarity-shortlisted, patient_id-filtered candidates by the date metadata field (descending) before truncating to the context budget.",
+    "rationale": "TF-IDF/embedding similarity has no notion of recency: repeated draws of the same lab test are near-equally similar to a 'most recent' query regardless of date. See ai/chunking-experiment.md Section 4 for the experiment that surfaced this.",
+    "dependency": "This policy is only reliably enforceable when every chunk carries an accurate, non-null date field, which the selected semantic/document-aware chunking strategy guarantees by construction. The fixed-token fallback strategy cannot reliably support this policy."
+  },
+  "isolation_policy": {
+    "isolation_key": "patient_id",
+    "enforcement": "mandatory_pre_ranking_filter",
+    "rule": "Every query to this index MUST supply a patient_id (or an explicitly authorized set of patient_ids for a delegate/clinician-care-relationship request) BEFORE similarity ranking is performed. The retriever must never rank or return a chunk whose patient_id is not in the caller's authorized set, regardless of similarity score. This is a hard filter, not a re-ranking signal or a post-hoc redaction step.",
+    "consent_check": "consent_scope on the chunk must additionally be validated against the caller's authorization (self / delegate / clinician_care_relationship) at query time, per FR-SAN-03 and FR-SAN-05.",
+    "cross_patient_retrieval": "prohibited",
+    "tested_in": "ai/chunking-experiment.md (isolation stress test: 0 cross-patient leaks observed across both chunking strategies)"
+  },
+  "metadata_schema": [
+    {
+      "field_name": "patient_id",
+      "data_type": "string",
+      "required": true,
+      "description": "Unique identifier of the patient who owns the underlying record. Mandatory on every chunk; used as the hard isolation/filter key.",
+      "example": "PAT-1001",
+      "role": "isolation_key"
+    },
+    {
+      "field_name": "document_id",
+      "data_type": "string",
+      "required": true,
+      "description": "Identifier of the source document (medical timeline, lab report, imaging report, etc.) the chunk was extracted from.",
+      "example": "DOC-PAT-1001"
+    },
+    {
+      "field_name": "chunk_id",
+      "data_type": "string",
+      "required": true,
+      "description": "Unique identifier of this specific chunk within the document.",
+      "example": "DOC-PAT-1001-SM03"
+    },
+    {
+      "field_name": "date",
+      "data_type": "string (ISO 8601 date)",
+      "required": true,
+      "description": "Date of the clinical event described in the chunk. If a chunk spans multiple dates (fallback strategy only), the earliest date is stored and is_multi_event is set to true.",
+      "example": "2021-04-18"
+    },
+    {
+      "field_name": "provider",
+      "data_type": "string",
+      "required": true,
+      "description": "Full name of the treating/recording clinician for the event(s) in the chunk.",
+      "example": "Dr. Mona Farid"
+    },
+    {
+      "field_name": "specialty",
+      "data_type": "string",
+      "required": true,
+      "description": "Clinical specialty of the provider.",
+      "example": "Cardiology"
+    },
+    {
+      "field_name": "document_type",
+      "data_type": "string",
+      "required": true,
+      "description": "Type of source document.",
+      "example": "medical_timeline"
+    },
+    {
+      "field_name": "record_type",
+      "data_type": "string",
+      "required": true,
+      "description": "Type of the clinical record described in the chunk.",
+      "allowed_values": ["encounter", "prescription", "lab_result", "imaging_report", "mixed", "unknown"],
+      "example": "encounter"
+    },
+    {
+      "field_name": "consent_scope",
+      "data_type": "string",
+      "required": true,
+      "description": "Authorization scope required to view this chunk.",
+      "allowed_values": ["self", "delegate", "clinician_care_relationship"],
+      "example": "self"
+    },
+    {
+      "field_name": "is_multi_event",
+      "data_type": "boolean",
+      "required": true,
+      "description": "True if a single chunk mixes more than one clinical event/record_type. Always false for the selected semantic/document-aware strategy by construction; used as a risk indicator when the fixed-token fallback is used.",
+      "example": false
+    },
+    {
+      "field_name": "token_count",
+      "data_type": "integer",
+      "required": true,
+      "description": "Number of tokens in the chunk text, used for token-efficiency accounting and context-budget planning.",
+      "example": 142
+    }
+  ],
+  "source_of_truth_for_field_names": "data-dictionary.csv",
+  "notes": [
+    "Schema field names above are copied verbatim from data-dictionary.csv (System Analyst Data Dictionary placeholder authored alongside this experiment; interns should replace with the authoritative file if/when one is published for the AI repository).",
+    "Embedding model for production is not yet selected; this experiment used TF-IDF as a lightweight, offline proxy for retrieval ranking to isolate the effect of chunking strategy. Swapping in a production embedding model does not change the isolation_policy or metadata_schema."
+  ]
+}

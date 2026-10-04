@@ -1,0 +1,32 @@
+## Encounter -- 2021-02-20
+Patient PAT-3014 presented to Dr. Laila Hassan (Orthopedics) with chronic knee pain worse with activity. Assessment: suspected osteoarthritis. Plan: order Knee X-ray Grading, start Meloxicam 7.5mg, follow-up in 6 weeks.
+
+## Prescription -- 2021-02-20
+Prescribed by Dr. Laila Hassan: Meloxicam 7.5mg, ongoing, for management of osteoarthritis.
+
+## Laboratory Result -- 2021-02-20
+Lab order: Knee X-ray Grading, ordered by Dr. Laila Hassan for PAT-3014. Result summary: KL grade = Grade 3 (severe). Report status: final. Report filed as document LAB-PAT-3014-0 in private storage.
+
+## Encounter -- 2021-05-10
+Follow-up with Dr. Laila Hassan. Patient tolerating therapy on Meloxicam 7.5mg. Assessment: osteoarthritis, improving. Plan: continue current regimen, repeat Knee X-ray Grading at next visit.
+
+## Laboratory Result -- 2021-05-10
+Lab order: Knee X-ray Grading, ordered by Dr. Laila Hassan for PAT-3014. Result summary: KL grade = Grade 3 (severe). Report status: final. Report filed as document LAB-PAT-3014-1 in private storage.
+
+## Encounter -- 2021-11-10
+Follow-up with Dr. Laila Hassan. Patient reports improvement on Meloxicam 7.5mg. Assessment: osteoarthritis, improving. Plan: continue current regimen, repeat Knee X-ray Grading at next visit.
+
+## Laboratory Result -- 2021-11-10
+Lab order: Knee X-ray Grading, ordered by Dr. Laila Hassan for PAT-3014. Result summary: KL grade = Grade 2 (moderate). Report status: final. Report filed as document LAB-PAT-3014-2 in private storage.
+
+## Encounter -- 2022-08-10
+Follow-up with Dr. Laila Hassan. Patient reports improvement on Meloxicam 7.5mg. Assessment: osteoarthritis, improving. Plan: continue current regimen, repeat Knee X-ray Grading at next visit.
+
+## Laboratory Result -- 2022-08-10
+Lab order: Knee X-ray Grading, ordered by Dr. Laila Hassan for PAT-3014. Result summary: KL grade = Grade 2 (moderate). Report status: final. Report filed as document LAB-PAT-3014-3 in private storage.
+
+## Encounter -- 2022-11-10
+Follow-up with Dr. Laila Hassan. Patient reports improvement on Meloxicam 7.5mg. Assessment: osteoarthritis, well controlled. Plan: continue current regimen, repeat Knee X-ray Grading at next visit.
+
+## Laboratory Result -- 2022-11-10
+Lab order: Knee X-ray Grading, ordered by Dr. Laila Hassan for PAT-3014. Result summary: KL grade = Grade 2 (moderate, stable). Report status: final. Report filed as document LAB-PAT-3014-4 in private storage.

@@ -1,0 +1,32 @@
+## Encounter -- 2021-05-20
+Patient PAT-3003 presented to Dr. Omar Sameh (Endocrinology) with increased thirst and fatigue. Assessment: suspected type 2 diabetes. Plan: order HbA1c, start Metformin 500mg, follow-up in 6 weeks.
+
+## Prescription -- 2021-05-20
+Prescribed by Dr. Omar Sameh: Metformin 500mg, ongoing, for management of type 2 diabetes.
+
+## Laboratory Result -- 2021-05-20
+Lab order: HbA1c, ordered by Dr. Omar Sameh for PAT-3003. Result summary: HbA1c = 8.7%. Report status: final. Report filed as document LAB-PAT-3003-0 in private storage.
+
+## Encounter -- 2021-08-10
+Follow-up with Dr. Omar Sameh. Patient tolerating therapy on Metformin 500mg. Assessment: type 2 diabetes, improving. Plan: continue current regimen, repeat HbA1c at next visit.
+
+## Laboratory Result -- 2021-08-10
+Lab order: HbA1c, ordered by Dr. Omar Sameh for PAT-3003. Result summary: HbA1c = 8.1%. Report status: final. Report filed as document LAB-PAT-3003-1 in private storage.
+
+## Encounter -- 2022-02-20
+Follow-up with Dr. Omar Sameh. Patient reports improvement on Metformin 500mg. Assessment: type 2 diabetes, improving. Plan: continue current regimen, repeat HbA1c at next visit.
+
+## Laboratory Result -- 2022-02-20
+Lab order: HbA1c, ordered by Dr. Omar Sameh for PAT-3003. Result summary: HbA1c = 8.0%. Report status: final. Report filed as document LAB-PAT-3003-2 in private storage.
+
+## Encounter -- 2022-08-20
+Follow-up with Dr. Omar Sameh. Patient reports improvement on Metformin 500mg. Assessment: type 2 diabetes, improving. Plan: continue current regimen, repeat HbA1c at next visit.
+
+## Laboratory Result -- 2022-08-20
+Lab order: HbA1c, ordered by Dr. Omar Sameh for PAT-3003. Result summary: HbA1c = 7.1%. Report status: final. Report filed as document LAB-PAT-3003-3 in private storage.
+
+## Encounter -- 2023-02-20
+Follow-up with Dr. Omar Sameh. Patient reports improvement on Metformin 500mg. Assessment: type 2 diabetes, well controlled. Plan: continue current regimen, repeat HbA1c at next visit.
+
+## Laboratory Result -- 2023-02-20
+Lab order: HbA1c, ordered by Dr. Omar Sameh for PAT-3003. Result summary: HbA1c = 7.2%. Report status: final. Report filed as document LAB-PAT-3003-4 in private storage.

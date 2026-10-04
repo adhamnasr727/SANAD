@@ -1,0 +1,32 @@
+## Encounter -- 2021-05-10
+Patient PAT-3005 presented to Dr. Karim Fathy (Internal Medicine) with intermittent headaches and dizziness. Assessment: suspected hypertension. Plan: order Ambulatory Blood Pressure, start Amlodipine 10mg, follow-up in 6 weeks.
+
+## Prescription -- 2021-05-10
+Prescribed by Dr. Karim Fathy: Amlodipine 10mg, ongoing, for management of hypertension.
+
+## Laboratory Result -- 2021-05-10
+Lab order: Ambulatory Blood Pressure, ordered by Dr. Karim Fathy for PAT-3005. Result summary: systolic bp = 159/107 mmHg. Report status: final. Report filed as document LAB-PAT-3005-0 in private storage.
+
+## Encounter -- 2021-08-20
+Follow-up with Dr. Karim Fathy. Patient tolerating therapy on Amlodipine 10mg. Assessment: hypertension, improving. Plan: continue current regimen, repeat Ambulatory Blood Pressure at next visit.
+
+## Laboratory Result -- 2021-08-20
+Lab order: Ambulatory Blood Pressure, ordered by Dr. Karim Fathy for PAT-3005. Result summary: systolic bp = 151/99 mmHg. Report status: final. Report filed as document LAB-PAT-3005-1 in private storage.
+
+## Encounter -- 2021-11-20
+Follow-up with Dr. Karim Fathy. Patient reports improvement on Amlodipine 10mg. Assessment: hypertension, improving. Plan: continue current regimen, repeat Ambulatory Blood Pressure at next visit.
+
+## Laboratory Result -- 2021-11-20
+Lab order: Ambulatory Blood Pressure, ordered by Dr. Karim Fathy for PAT-3005. Result summary: systolic bp = 145/93 mmHg. Report status: final. Report filed as document LAB-PAT-3005-2 in private storage.
+
+## Encounter -- 2023-05-10
+Follow-up with Dr. Karim Fathy. Patient reports improvement on Amlodipine 10mg. Assessment: hypertension, improving. Plan: continue current regimen, repeat Ambulatory Blood Pressure at next visit.
+
+## Laboratory Result -- 2023-05-10
+Lab order: Ambulatory Blood Pressure, ordered by Dr. Karim Fathy for PAT-3005. Result summary: systolic bp = 129/77 mmHg. Report status: final. Report filed as document LAB-PAT-3005-3 in private storage.
+
+## Encounter -- 2023-11-10
+Follow-up with Dr. Karim Fathy. Patient reports improvement on Amlodipine 10mg. Assessment: hypertension, well controlled. Plan: continue current regimen, repeat Ambulatory Blood Pressure at next visit.
+
+## Laboratory Result -- 2023-11-10
+Lab order: Ambulatory Blood Pressure, ordered by Dr. Karim Fathy for PAT-3005. Result summary: systolic bp = 127/75 mmHg. Report status: final. Report filed as document LAB-PAT-3005-4 in private storage.
