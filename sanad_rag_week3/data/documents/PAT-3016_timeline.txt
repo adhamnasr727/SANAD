@@ -1,0 +1,32 @@
+## Encounter -- 2021-02-10
+Patient PAT-3016 presented to Dr. Nourhan Adel (Gastroenterology) with frequent heartburn and regurgitation. Assessment: suspected gerd. Plan: order Endoscopy Severity Grading, start Omeprazole 20mg, follow-up in 6 weeks.
+
+## Prescription -- 2021-02-10
+Prescribed by Dr. Nourhan Adel: Omeprazole 20mg, ongoing, for management of gerd.
+
+## Laboratory Result -- 2021-02-10
+Lab order: Endoscopy Severity Grading, ordered by Dr. Nourhan Adel for PAT-3016. Result summary: LA grade = LA Grade C. Report status: final. Report filed as document LAB-PAT-3016-0 in private storage.
+
+## Encounter -- 2021-05-20
+Follow-up with Dr. Nourhan Adel. Patient tolerating therapy on Omeprazole 20mg. Assessment: gerd, improving. Plan: continue current regimen, repeat Endoscopy Severity Grading at next visit.
+
+## Laboratory Result -- 2021-05-20
+Lab order: Endoscopy Severity Grading, ordered by Dr. Nourhan Adel for PAT-3016. Result summary: LA grade = LA Grade B. Report status: final. Report filed as document LAB-PAT-3016-1 in private storage.
+
+## Encounter -- 2022-05-20
+Follow-up with Dr. Nourhan Adel. Patient reports improvement on Omeprazole 20mg. Assessment: gerd, improving. Plan: continue current regimen, repeat Endoscopy Severity Grading at next visit.
+
+## Laboratory Result -- 2022-05-20
+Lab order: Endoscopy Severity Grading, ordered by Dr. Nourhan Adel for PAT-3016. Result summary: LA grade = LA Grade B. Report status: final. Report filed as document LAB-PAT-3016-2 in private storage.
+
+## Encounter -- 2023-02-20
+Follow-up with Dr. Nourhan Adel. Patient reports improvement on Omeprazole 20mg. Assessment: gerd, improving. Plan: continue current regimen, repeat Endoscopy Severity Grading at next visit.
+
+## Laboratory Result -- 2023-02-20
+Lab order: Endoscopy Severity Grading, ordered by Dr. Nourhan Adel for PAT-3016. Result summary: LA grade = LA Grade A. Report status: final. Report filed as document LAB-PAT-3016-3 in private storage.
+
+## Encounter -- 2023-05-20
+Follow-up with Dr. Nourhan Adel. Patient reports improvement on Omeprazole 20mg. Assessment: gerd, well controlled. Plan: continue current regimen, repeat Endoscopy Severity Grading at next visit.
+
+## Laboratory Result -- 2023-05-20
+Lab order: Endoscopy Severity Grading, ordered by Dr. Nourhan Adel for PAT-3016. Result summary: LA grade = LA Grade A (healed). Report status: final. Report filed as document LAB-PAT-3016-4 in private storage.

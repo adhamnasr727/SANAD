@@ -1,0 +1,32 @@
+## Encounter -- 2021-02-10
+Patient PAT-3012 presented to Dr. Mona Farid (Endocrinology) with unexplained weight gain and cold intolerance. Assessment: suspected hypothyroidism. Plan: order Thyroid Function (TSH), start Levothyroxine 100mcg, follow-up in 6 weeks.
+
+## Prescription -- 2021-02-10
+Prescribed by Dr. Mona Farid: Levothyroxine 100mcg, ongoing, for management of hypothyroidism.
+
+## Laboratory Result -- 2021-02-10
+Lab order: Thyroid Function (TSH), ordered by Dr. Mona Farid for PAT-3012. Result summary: TSH = 8.3 mIU/L. Report status: final. Report filed as document LAB-PAT-3012-0 in private storage.
+
+## Encounter -- 2021-08-10
+Follow-up with Dr. Mona Farid. Patient tolerating therapy on Levothyroxine 100mcg. Assessment: hypothyroidism, improving. Plan: continue current regimen, repeat Thyroid Function (TSH) at next visit.
+
+## Laboratory Result -- 2021-08-10
+Lab order: Thyroid Function (TSH), ordered by Dr. Mona Farid for PAT-3012. Result summary: TSH = 7.4 mIU/L. Report status: final. Report filed as document LAB-PAT-3012-1 in private storage.
+
+## Encounter -- 2022-05-20
+Follow-up with Dr. Mona Farid. Patient reports improvement on Levothyroxine 100mcg. Assessment: hypothyroidism, improving. Plan: continue current regimen, repeat Thyroid Function (TSH) at next visit.
+
+## Laboratory Result -- 2022-05-20
+Lab order: Thyroid Function (TSH), ordered by Dr. Mona Farid for PAT-3012. Result summary: TSH = 5.5 mIU/L. Report status: final. Report filed as document LAB-PAT-3012-2 in private storage.
+
+## Encounter -- 2022-08-20
+Follow-up with Dr. Mona Farid. Patient reports improvement on Levothyroxine 100mcg. Assessment: hypothyroidism, improving. Plan: continue current regimen, repeat Thyroid Function (TSH) at next visit.
+
+## Laboratory Result -- 2022-08-20
+Lab order: Thyroid Function (TSH), ordered by Dr. Mona Farid for PAT-3012. Result summary: TSH = 3.9 mIU/L. Report status: final. Report filed as document LAB-PAT-3012-3 in private storage.
+
+## Encounter -- 2023-02-20
+Follow-up with Dr. Mona Farid. Patient reports improvement on Levothyroxine 100mcg. Assessment: hypothyroidism, well controlled. Plan: continue current regimen, repeat Thyroid Function (TSH) at next visit.
+
+## Laboratory Result -- 2023-02-20
+Lab order: Thyroid Function (TSH), ordered by Dr. Mona Farid for PAT-3012. Result summary: TSH = 3.3 mIU/L. Report status: final. Report filed as document LAB-PAT-3012-4 in private storage.

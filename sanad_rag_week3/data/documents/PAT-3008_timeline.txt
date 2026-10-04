@@ -1,0 +1,32 @@
+## Encounter -- 2021-02-20
+Patient PAT-3008 presented to Dr. Rania Kamal (Pulmonology) with shortness of breath and wheeze with exercise. Assessment: suspected asthma. Plan: order Spirometry (FEV1 %predicted), start Fluticasone/Salmeterol inhaler medium-dose, follow-up in 6 weeks.
+
+## Prescription -- 2021-02-20
+Prescribed by Dr. Rania Kamal: Fluticasone/Salmeterol inhaler medium-dose, ongoing, for management of asthma.
+
+## Laboratory Result -- 2021-02-20
+Lab order: Spirometry (FEV1 %predicted), ordered by Dr. Rania Kamal for PAT-3008. Result summary: FEV1 pct = 66% predicted. Report status: final. Report filed as document LAB-PAT-3008-0 in private storage.
+
+## Encounter -- 2021-05-10
+Follow-up with Dr. Rania Kamal. Patient tolerating therapy on Fluticasone/Salmeterol inhaler medium-dose. Assessment: asthma, improving. Plan: continue current regimen, repeat Spirometry (FEV1 %predicted) at next visit.
+
+## Laboratory Result -- 2021-05-10
+Lab order: Spirometry (FEV1 %predicted), ordered by Dr. Rania Kamal for PAT-3008. Result summary: FEV1 pct = 74% predicted. Report status: final. Report filed as document LAB-PAT-3008-1 in private storage.
+
+## Encounter -- 2023-08-20
+Follow-up with Dr. Rania Kamal. Patient reports improvement on Fluticasone/Salmeterol inhaler medium-dose. Assessment: asthma, improving. Plan: continue current regimen, repeat Spirometry (FEV1 %predicted) at next visit.
+
+## Laboratory Result -- 2023-08-20
+Lab order: Spirometry (FEV1 %predicted), ordered by Dr. Rania Kamal for PAT-3008. Result summary: FEV1 pct = 80% predicted. Report status: final. Report filed as document LAB-PAT-3008-2 in private storage.
+
+## Encounter -- 2023-11-10
+Follow-up with Dr. Rania Kamal. Patient reports improvement on Fluticasone/Salmeterol inhaler medium-dose. Assessment: asthma, improving. Plan: continue current regimen, repeat Spirometry (FEV1 %predicted) at next visit.
+
+## Laboratory Result -- 2023-11-10
+Lab order: Spirometry (FEV1 %predicted), ordered by Dr. Rania Kamal for PAT-3008. Result summary: FEV1 pct = 84% predicted. Report status: final. Report filed as document LAB-PAT-3008-3 in private storage.
+
+## Encounter -- 2023-11-20
+Follow-up with Dr. Rania Kamal. Patient reports improvement on Fluticasone/Salmeterol inhaler medium-dose. Assessment: asthma, well controlled. Plan: continue current regimen, repeat Spirometry (FEV1 %predicted) at next visit.
+
+## Laboratory Result -- 2023-11-20
+Lab order: Spirometry (FEV1 %predicted), ordered by Dr. Rania Kamal for PAT-3008. Result summary: FEV1 pct = 94% predicted. Report status: final. Report filed as document LAB-PAT-3008-4 in private storage.

@@ -1,0 +1,32 @@
+## Encounter -- 2021-05-10
+Patient PAT-3006 presented to Dr. Salma Reda (Internal Medicine) with intermittent headaches and dizziness. Assessment: suspected hypertension. Plan: order Ambulatory Blood Pressure, start Amlodipine 5mg, follow-up in 6 weeks.
+
+## Prescription -- 2021-05-10
+Prescribed by Dr. Salma Reda: Amlodipine 5mg, ongoing, for management of hypertension.
+
+## Laboratory Result -- 2021-05-10
+Lab order: Ambulatory Blood Pressure, ordered by Dr. Salma Reda for PAT-3006. Result summary: systolic bp = 160/108 mmHg. Report status: final. Report filed as document LAB-PAT-3006-0 in private storage.
+
+## Encounter -- 2021-05-20
+Follow-up with Dr. Salma Reda. Patient tolerating therapy on Amlodipine 5mg. Assessment: hypertension, improving. Plan: continue current regimen, repeat Ambulatory Blood Pressure at next visit.
+
+## Laboratory Result -- 2021-05-20
+Lab order: Ambulatory Blood Pressure, ordered by Dr. Salma Reda for PAT-3006. Result summary: systolic bp = 152/100 mmHg. Report status: final. Report filed as document LAB-PAT-3006-1 in private storage.
+
+## Encounter -- 2021-08-20
+Follow-up with Dr. Salma Reda. Patient reports improvement on Amlodipine 5mg. Assessment: hypertension, improving. Plan: continue current regimen, repeat Ambulatory Blood Pressure at next visit.
+
+## Laboratory Result -- 2021-08-20
+Lab order: Ambulatory Blood Pressure, ordered by Dr. Salma Reda for PAT-3006. Result summary: systolic bp = 144/92 mmHg. Report status: final. Report filed as document LAB-PAT-3006-2 in private storage.
+
+## Encounter -- 2022-08-20
+Follow-up with Dr. Salma Reda. Patient reports improvement on Amlodipine 5mg. Assessment: hypertension, improving. Plan: continue current regimen, repeat Ambulatory Blood Pressure at next visit.
+
+## Laboratory Result -- 2022-08-20
+Lab order: Ambulatory Blood Pressure, ordered by Dr. Salma Reda for PAT-3006. Result summary: systolic bp = 145/93 mmHg. Report status: final. Report filed as document LAB-PAT-3006-3 in private storage.
+
+## Encounter -- 2023-02-10
+Follow-up with Dr. Salma Reda. Patient reports improvement on Amlodipine 5mg. Assessment: hypertension, well controlled. Plan: continue current regimen, repeat Ambulatory Blood Pressure at next visit.
+
+## Laboratory Result -- 2023-02-10
+Lab order: Ambulatory Blood Pressure, ordered by Dr. Salma Reda for PAT-3006. Result summary: systolic bp = 120/68 mmHg. Report status: final. Report filed as document LAB-PAT-3006-4 in private storage.

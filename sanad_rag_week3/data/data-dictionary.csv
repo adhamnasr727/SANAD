@@ -1,0 +1,12 @@
+field_name,data_type,required,description,example
+patient_id,string,true,Unique identifier of the patient who owns the underlying record. Mandatory on every chunk; used as the hard isolation/filter key.,PAT-1001
+document_id,string,true,"Identifier of the source document (medical timeline, lab report, imaging report, etc.) the chunk was extracted from.",DOC-PAT-1001
+chunk_id,string,true,Unique identifier of this specific chunk within the document.,DOC-PAT-1001-SM03
+date,string,true,"ISO date (YYYY-MM-DD) of the clinical event described in the chunk. If a chunk spans multiple dates, the earliest date in the chunk is stored and is_multi_event is set to true.",2021-04-18
+provider,string,true,Full name of the treating/recording clinician for the event(s) in the chunk.,Dr. Mona Farid
+specialty,string,true,Clinical specialty of the provider.,Cardiology
+document_type,string,true,Type of source document.,medical_timeline
+record_type,string,true,Type of the clinical record described in the chunk (encounter / prescription / lab_result / imaging_report; mixed or unknown for fallback chunks).,encounter
+consent_scope,string,true,Authorization scope required to view this chunk (self / delegate / clinician_care_relationship).,self
+is_multi_event,boolean,true,True if a single chunk mixes more than one clinical event/record_type (a risk indicator for fixed-token chunking).,false
+token_count,integer,true,"Number of tokens in the chunk text, used for token-efficiency accounting.",142

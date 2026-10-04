@@ -1,0 +1,32 @@
+## Encounter -- 2021-05-20
+Patient PAT-3013 presented to Dr. Youssef Nabil (Orthopedics) with chronic knee pain worse with activity. Assessment: suspected osteoarthritis. Plan: order Knee X-ray Grading, start Meloxicam 15mg, follow-up in 6 weeks.
+
+## Prescription -- 2021-05-20
+Prescribed by Dr. Youssef Nabil: Meloxicam 15mg, ongoing, for management of osteoarthritis.
+
+## Laboratory Result -- 2021-05-20
+Lab order: Knee X-ray Grading, ordered by Dr. Youssef Nabil for PAT-3013. Result summary: KL grade = Grade 3 (severe). Report status: final. Report filed as document LAB-PAT-3013-0 in private storage.
+
+## Encounter -- 2022-08-10
+Follow-up with Dr. Youssef Nabil. Patient tolerating therapy on Meloxicam 15mg. Assessment: osteoarthritis, improving. Plan: continue current regimen, repeat Knee X-ray Grading at next visit.
+
+## Laboratory Result -- 2022-08-10
+Lab order: Knee X-ray Grading, ordered by Dr. Youssef Nabil for PAT-3013. Result summary: KL grade = Grade 3 (severe). Report status: final. Report filed as document LAB-PAT-3013-1 in private storage.
+
+## Encounter -- 2022-11-10
+Follow-up with Dr. Youssef Nabil. Patient reports improvement on Meloxicam 15mg. Assessment: osteoarthritis, improving. Plan: continue current regimen, repeat Knee X-ray Grading at next visit.
+
+## Laboratory Result -- 2022-11-10
+Lab order: Knee X-ray Grading, ordered by Dr. Youssef Nabil for PAT-3013. Result summary: KL grade = Grade 2 (moderate). Report status: final. Report filed as document LAB-PAT-3013-2 in private storage.
+
+## Encounter -- 2023-02-20
+Follow-up with Dr. Youssef Nabil. Patient reports improvement on Meloxicam 15mg. Assessment: osteoarthritis, improving. Plan: continue current regimen, repeat Knee X-ray Grading at next visit.
+
+## Laboratory Result -- 2023-02-20
+Lab order: Knee X-ray Grading, ordered by Dr. Youssef Nabil for PAT-3013. Result summary: KL grade = Grade 2 (moderate). Report status: final. Report filed as document LAB-PAT-3013-3 in private storage.
+
+## Encounter -- 2023-08-20
+Follow-up with Dr. Youssef Nabil. Patient reports improvement on Meloxicam 15mg. Assessment: osteoarthritis, well controlled. Plan: continue current regimen, repeat Knee X-ray Grading at next visit.
+
+## Laboratory Result -- 2023-08-20
+Lab order: Knee X-ray Grading, ordered by Dr. Youssef Nabil for PAT-3013. Result summary: KL grade = Grade 2 (moderate, stable). Report status: final. Report filed as document LAB-PAT-3013-4 in private storage.

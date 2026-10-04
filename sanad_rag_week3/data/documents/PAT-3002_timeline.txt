@@ -1,0 +1,32 @@
+## Encounter -- 2021-02-20
+Patient PAT-3002 presented to Dr. Laila Hassan (Cardiology) with chest tightness on exertion. Assessment: suspected coronary artery disease. Plan: order Lipid Panel, start Atorvastatin 10mg, follow-up in 6 weeks.
+
+## Prescription -- 2021-02-20
+Prescribed by Dr. Laila Hassan: Atorvastatin 10mg, ongoing, for management of coronary artery disease.
+
+## Laboratory Result -- 2021-02-20
+Lab order: Lipid Panel, ordered by Dr. Laila Hassan for PAT-3002. Result summary: LDL = 186 mg/dL. Report status: final. Report filed as document LAB-PAT-3002-0 in private storage.
+
+## Encounter -- 2021-05-10
+Follow-up with Dr. Laila Hassan. Patient tolerating therapy on Atorvastatin 10mg. Assessment: coronary artery disease, improving. Plan: continue current regimen, repeat Lipid Panel at next visit.
+
+## Laboratory Result -- 2021-05-10
+Lab order: Lipid Panel, ordered by Dr. Laila Hassan for PAT-3002. Result summary: LDL = 175 mg/dL. Report status: final. Report filed as document LAB-PAT-3002-1 in private storage.
+
+## Encounter -- 2021-11-20
+Follow-up with Dr. Laila Hassan. Patient reports improvement on Atorvastatin 10mg. Assessment: coronary artery disease, improving. Plan: continue current regimen, repeat Lipid Panel at next visit.
+
+## Laboratory Result -- 2021-11-20
+Lab order: Lipid Panel, ordered by Dr. Laila Hassan for PAT-3002. Result summary: LDL = 170 mg/dL. Report status: final. Report filed as document LAB-PAT-3002-2 in private storage.
+
+## Encounter -- 2022-08-20
+Follow-up with Dr. Laila Hassan. Patient reports improvement on Atorvastatin 10mg. Assessment: coronary artery disease, improving. Plan: continue current regimen, repeat Lipid Panel at next visit.
+
+## Laboratory Result -- 2022-08-20
+Lab order: Lipid Panel, ordered by Dr. Laila Hassan for PAT-3002. Result summary: LDL = 144 mg/dL. Report status: final. Report filed as document LAB-PAT-3002-3 in private storage.
+
+## Encounter -- 2023-02-20
+Follow-up with Dr. Laila Hassan. Patient reports improvement on Atorvastatin 10mg. Assessment: coronary artery disease, well controlled. Plan: continue current regimen, repeat Lipid Panel at next visit.
+
+## Laboratory Result -- 2023-02-20
+Lab order: Lipid Panel, ordered by Dr. Laila Hassan for PAT-3002. Result summary: LDL = 154 mg/dL. Report status: final. Report filed as document LAB-PAT-3002-4 in private storage.

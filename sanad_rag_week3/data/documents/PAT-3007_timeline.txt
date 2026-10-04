@@ -1,0 +1,32 @@
+## Encounter -- 2022-05-10
+Patient PAT-3007 presented to Dr. Tamer Aziz (Pulmonology) with shortness of breath and wheeze with exercise. Assessment: suspected asthma. Plan: order Spirometry (FEV1 %predicted), start Fluticasone/Salmeterol inhaler medium-dose, follow-up in 6 weeks.
+
+## Prescription -- 2022-05-10
+Prescribed by Dr. Tamer Aziz: Fluticasone/Salmeterol inhaler medium-dose, ongoing, for management of asthma.
+
+## Laboratory Result -- 2022-05-10
+Lab order: Spirometry (FEV1 %predicted), ordered by Dr. Tamer Aziz for PAT-3007. Result summary: FEV1 pct = 64% predicted. Report status: final. Report filed as document LAB-PAT-3007-0 in private storage.
+
+## Encounter -- 2022-05-20
+Follow-up with Dr. Tamer Aziz. Patient tolerating therapy on Fluticasone/Salmeterol inhaler medium-dose. Assessment: asthma, improving. Plan: continue current regimen, repeat Spirometry (FEV1 %predicted) at next visit.
+
+## Laboratory Result -- 2022-05-20
+Lab order: Spirometry (FEV1 %predicted), ordered by Dr. Tamer Aziz for PAT-3007. Result summary: FEV1 pct = 72% predicted. Report status: final. Report filed as document LAB-PAT-3007-1 in private storage.
+
+## Encounter -- 2023-02-20
+Follow-up with Dr. Tamer Aziz. Patient reports improvement on Fluticasone/Salmeterol inhaler medium-dose. Assessment: asthma, improving. Plan: continue current regimen, repeat Spirometry (FEV1 %predicted) at next visit.
+
+## Laboratory Result -- 2023-02-20
+Lab order: Spirometry (FEV1 %predicted), ordered by Dr. Tamer Aziz for PAT-3007. Result summary: FEV1 pct = 78% predicted. Report status: final. Report filed as document LAB-PAT-3007-2 in private storage.
+
+## Encounter -- 2023-05-10
+Follow-up with Dr. Tamer Aziz. Patient reports improvement on Fluticasone/Salmeterol inhaler medium-dose. Assessment: asthma, improving. Plan: continue current regimen, repeat Spirometry (FEV1 %predicted) at next visit.
+
+## Laboratory Result -- 2023-05-10
+Lab order: Spirometry (FEV1 %predicted), ordered by Dr. Tamer Aziz for PAT-3007. Result summary: FEV1 pct = 76% predicted. Report status: final. Report filed as document LAB-PAT-3007-3 in private storage.
+
+## Encounter -- 2023-11-10
+Follow-up with Dr. Tamer Aziz. Patient reports improvement on Fluticasone/Salmeterol inhaler medium-dose. Assessment: asthma, well controlled. Plan: continue current regimen, repeat Spirometry (FEV1 %predicted) at next visit.
+
+## Laboratory Result -- 2023-11-10
+Lab order: Spirometry (FEV1 %predicted), ordered by Dr. Tamer Aziz for PAT-3007. Result summary: FEV1 pct = 80% predicted. Report status: final. Report filed as document LAB-PAT-3007-4 in private storage.

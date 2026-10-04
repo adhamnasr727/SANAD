@@ -1,0 +1,32 @@
+## Encounter -- 2021-02-20
+Patient PAT-3001 presented to Dr. Youssef Nabil (Cardiology) with chest tightness on exertion. Assessment: suspected coronary artery disease. Plan: order Lipid Panel, start Atorvastatin 10mg, follow-up in 6 weeks.
+
+## Prescription -- 2021-02-20
+Prescribed by Dr. Youssef Nabil: Atorvastatin 10mg, ongoing, for management of coronary artery disease.
+
+## Laboratory Result -- 2021-02-20
+Lab order: Lipid Panel, ordered by Dr. Youssef Nabil for PAT-3001. Result summary: LDL = 154 mg/dL. Report status: final. Report filed as document LAB-PAT-3001-0 in private storage.
+
+## Encounter -- 2021-08-10
+Follow-up with Dr. Youssef Nabil. Patient tolerating therapy on Atorvastatin 10mg. Assessment: coronary artery disease, improving. Plan: continue current regimen, repeat Lipid Panel at next visit.
+
+## Laboratory Result -- 2021-08-10
+Lab order: Lipid Panel, ordered by Dr. Youssef Nabil for PAT-3001. Result summary: LDL = 145 mg/dL. Report status: final. Report filed as document LAB-PAT-3001-1 in private storage.
+
+## Encounter -- 2022-05-10
+Follow-up with Dr. Youssef Nabil. Patient reports improvement on Atorvastatin 10mg. Assessment: coronary artery disease, improving. Plan: continue current regimen, repeat Lipid Panel at next visit.
+
+## Laboratory Result -- 2022-05-10
+Lab order: Lipid Panel, ordered by Dr. Youssef Nabil for PAT-3001. Result summary: LDL = 128 mg/dL. Report status: final. Report filed as document LAB-PAT-3001-2 in private storage.
+
+## Encounter -- 2022-08-10
+Follow-up with Dr. Youssef Nabil. Patient reports improvement on Atorvastatin 10mg. Assessment: coronary artery disease, improving. Plan: continue current regimen, repeat Lipid Panel at next visit.
+
+## Laboratory Result -- 2022-08-10
+Lab order: Lipid Panel, ordered by Dr. Youssef Nabil for PAT-3001. Result summary: LDL = 130 mg/dL. Report status: final. Report filed as document LAB-PAT-3001-3 in private storage.
+
+## Encounter -- 2023-08-10
+Follow-up with Dr. Youssef Nabil. Patient reports improvement on Atorvastatin 10mg. Assessment: coronary artery disease, well controlled. Plan: continue current regimen, repeat Lipid Panel at next visit.
+
+## Laboratory Result -- 2023-08-10
+Lab order: Lipid Panel, ordered by Dr. Youssef Nabil for PAT-3001. Result summary: LDL = 90 mg/dL. Report status: final. Report filed as document LAB-PAT-3001-4 in private storage.

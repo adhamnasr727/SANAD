@@ -1,0 +1,32 @@
+## Encounter -- 2021-02-20
+Patient PAT-3004 presented to Dr. Nourhan Adel (Endocrinology) with increased thirst and fatigue. Assessment: suspected type 2 diabetes. Plan: order HbA1c, start Metformin 1000mg, follow-up in 6 weeks.
+
+## Prescription -- 2021-02-20
+Prescribed by Dr. Nourhan Adel: Metformin 1000mg, ongoing, for management of type 2 diabetes.
+
+## Laboratory Result -- 2021-02-20
+Lab order: HbA1c, ordered by Dr. Nourhan Adel for PAT-3004. Result summary: HbA1c = 8.1%. Report status: final. Report filed as document LAB-PAT-3004-0 in private storage.
+
+## Encounter -- 2021-05-10
+Follow-up with Dr. Nourhan Adel. Patient tolerating therapy on Metformin 1000mg. Assessment: type 2 diabetes, improving. Plan: continue current regimen, repeat HbA1c at next visit.
+
+## Laboratory Result -- 2021-05-10
+Lab order: HbA1c, ordered by Dr. Nourhan Adel for PAT-3004. Result summary: HbA1c = 7.6%. Report status: final. Report filed as document LAB-PAT-3004-1 in private storage.
+
+## Encounter -- 2023-05-10
+Follow-up with Dr. Nourhan Adel. Patient reports improvement on Metformin 1000mg. Assessment: type 2 diabetes, improving. Plan: continue current regimen, repeat HbA1c at next visit.
+
+## Laboratory Result -- 2023-05-10
+Lab order: HbA1c, ordered by Dr. Nourhan Adel for PAT-3004. Result summary: HbA1c = 7.2%. Report status: final. Report filed as document LAB-PAT-3004-2 in private storage.
+
+## Encounter -- 2023-05-20
+Follow-up with Dr. Nourhan Adel. Patient reports improvement on Metformin 1000mg. Assessment: type 2 diabetes, improving. Plan: continue current regimen, repeat HbA1c at next visit.
+
+## Laboratory Result -- 2023-05-20
+Lab order: HbA1c, ordered by Dr. Nourhan Adel for PAT-3004. Result summary: HbA1c = 6.5%. Report status: final. Report filed as document LAB-PAT-3004-3 in private storage.
+
+## Encounter -- 2023-11-10
+Follow-up with Dr. Nourhan Adel. Patient reports improvement on Metformin 1000mg. Assessment: type 2 diabetes, well controlled. Plan: continue current regimen, repeat HbA1c at next visit.
+
+## Laboratory Result -- 2023-11-10
+Lab order: HbA1c, ordered by Dr. Nourhan Adel for PAT-3004. Result summary: HbA1c = 6.2%. Report status: final. Report filed as document LAB-PAT-3004-4 in private storage.

@@ -1,0 +1,32 @@
+## Encounter -- 2021-02-10
+Patient PAT-3009 presented to Dr. Hassan Ibrahim (Nephrology) with swelling in the ankles and fatigue. Assessment: suspected chronic kidney disease. Plan: order eGFR Panel, start Lisinopril 20mg, follow-up in 6 weeks.
+
+## Prescription -- 2021-02-10
+Prescribed by Dr. Hassan Ibrahim: Lisinopril 20mg, ongoing, for management of chronic kidney disease.
+
+## Laboratory Result -- 2021-02-10
+Lab order: eGFR Panel, ordered by Dr. Hassan Ibrahim for PAT-3009. Result summary: eGFR = 38 mL/min/1.73m2. Report status: final. Report filed as document LAB-PAT-3009-0 in private storage.
+
+## Encounter -- 2021-08-20
+Follow-up with Dr. Hassan Ibrahim. Patient tolerating therapy on Lisinopril 20mg. Assessment: chronic kidney disease, improving. Plan: continue current regimen, repeat eGFR Panel at next visit.
+
+## Laboratory Result -- 2021-08-20
+Lab order: eGFR Panel, ordered by Dr. Hassan Ibrahim for PAT-3009. Result summary: eGFR = 40 mL/min/1.73m2. Report status: final. Report filed as document LAB-PAT-3009-1 in private storage.
+
+## Encounter -- 2022-05-20
+Follow-up with Dr. Hassan Ibrahim. Patient reports improvement on Lisinopril 20mg. Assessment: chronic kidney disease, improving. Plan: continue current regimen, repeat eGFR Panel at next visit.
+
+## Laboratory Result -- 2022-05-20
+Lab order: eGFR Panel, ordered by Dr. Hassan Ibrahim for PAT-3009. Result summary: eGFR = 44 mL/min/1.73m2. Report status: final. Report filed as document LAB-PAT-3009-2 in private storage.
+
+## Encounter -- 2022-11-10
+Follow-up with Dr. Hassan Ibrahim. Patient reports improvement on Lisinopril 20mg. Assessment: chronic kidney disease, improving. Plan: continue current regimen, repeat eGFR Panel at next visit.
+
+## Laboratory Result -- 2022-11-10
+Lab order: eGFR Panel, ordered by Dr. Hassan Ibrahim for PAT-3009. Result summary: eGFR = 50 mL/min/1.73m2. Report status: final. Report filed as document LAB-PAT-3009-3 in private storage.
+
+## Encounter -- 2023-05-20
+Follow-up with Dr. Hassan Ibrahim. Patient reports improvement on Lisinopril 20mg. Assessment: chronic kidney disease, well controlled. Plan: continue current regimen, repeat eGFR Panel at next visit.
+
+## Laboratory Result -- 2023-05-20
+Lab order: eGFR Panel, ordered by Dr. Hassan Ibrahim for PAT-3009. Result summary: eGFR = 50 mL/min/1.73m2. Report status: final. Report filed as document LAB-PAT-3009-4 in private storage.
