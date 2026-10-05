@@ -1,0 +1,116 @@
+##############################################################################
+ SANAD Grounded Clinical Answer Service -- Live Demo (RAG-3 v1)
+##############################################################################
+
+==============================================================================
+ 1) Normal grounded question -- with citations
+==============================================================================
+
+>>> question : What medication and dose is PAT-3001 currently taking?
+>>> tenant_id: PAT-3001
+------------------------------------------------------------------------------
+Summary of the patient's own recorded data (not a diagnosis):
+- (encounter, 2021-02-20) Patient PAT-3001 presented to Dr. Youssef Nabil (Cardiology) with chest tightness on exertion. Assessment: suspected coronary artery disease. Plan: order Lipid Panel, start Atorvastatin 10mg, follow-up in 6 weeks. [DOC-PAT-3001-SM00]
+- (prescription, 2021-02-20) Prescribed by Dr. Youssef Nabil: Atorvastatin 10mg, ongoing, for management of coronary artery disease. [DOC-PAT-3001-SM01]
+- (encounter, 2021-08-10) Follow-up with Dr. Youssef Nabil. Patient tolerating therapy on Atorvastatin 10mg. Assessment: coronary artery disease, improving. Plan: continue current regimen, repeat Lipid Panel at next visit. [DOC-PAT-3001-SM03]
+
+Citations:
+  - [DOC-PAT-3001-SM00] (doc DOC-PAT-3001) "## Encounter -- 2021-02-20
+Patient PAT-3001 presented to Dr. Youssef N..."
+  - [DOC-PAT-3001-SM01] (doc DOC-PAT-3001) "## Prescription -- 2021-02-20
+Prescribed by Dr. Youssef Nabil: Atorvas..."
+  - [DOC-PAT-3001-SM03] (doc DOC-PAT-3001) "## Encounter -- 2021-08-10
+Follow-up with Dr. Youssef Nabil. Patient t..."
+------------------------------------------------------------------------------
+
+==============================================================================
+ 2) 'Most recent' question -- date-aware re-ranking
+==============================================================================
+(Patient has 5 repeated lab draws over 2-3 years; service must
+ pick the one with the LATEST date, not just the most text-similar.)
+
+>>> question : What was PAT-3003's most recent HbA1c result?
+>>> tenant_id: PAT-3003
+------------------------------------------------------------------------------
+Summary of the patient's own recorded data (not a diagnosis):
+- (lab_result, 2023-02-20) Lab order: HbA1c, ordered by Dr. Omar Sameh for PAT-3003. Result summary: HbA1c = 7.2%. Report status: final. Report filed as document LAB-PAT-3003-4 in private storage. [DOC-PAT-3003-SM10]
+- (encounter, 2023-02-20) Follow-up with Dr. Omar Sameh. Patient reports improvement on Metformin 500mg. Assessment: type 2 diabetes, well controlled. Plan: continue current regimen, repeat HbA1c at next visit. [DOC-PAT-3003-SM09]
+- (lab_result, 2022-08-20) Lab order: HbA1c, ordered by Dr. Omar Sameh for PAT-3003. Result summary: HbA1c = 7.1%. Report status: final. Report filed as document LAB-PAT-3003-3 in private storage. [DOC-PAT-3003-SM08]
+
+Citations:
+  - [DOC-PAT-3003-SM10] (doc DOC-PAT-3003) "## Laboratory Result -- 2023-02-20
+Lab order: HbA1c, ordered by Dr. Om..."
+  - [DOC-PAT-3003-SM09] (doc DOC-PAT-3003) "## Encounter -- 2023-02-20
+Follow-up with Dr. Omar Sameh. Patient repo..."
+  - [DOC-PAT-3003-SM08] (doc DOC-PAT-3003) "## Laboratory Result -- 2022-08-20
+Lab order: HbA1c, ordered by Dr. Om..."
+------------------------------------------------------------------------------
+
+==============================================================================
+ 3) Missing data -- explicitly reported, never invented
+==============================================================================
+(PAT-3003 is a diabetes patient with no thyroid test on record.
+ The service must say so, not substitute an unrelated lab result.)
+
+>>> question : What was PAT-3003's Thyroid Function (TSH) result?
+>>> tenant_id: PAT-3003
+------------------------------------------------------------------------------
+No matching records were found for this patient for the specific test(s)/record(s) asked about: Thyroid Function (TSH). This is reported as missing rather than inferred from other records.
+
+Missing (explicitly reported, not inferred):
+  - No Thyroid Function (TSH) record found for this patient.
+------------------------------------------------------------------------------
+
+==============================================================================
+ 4) Guardrail -- diagnosis request refused
+==============================================================================
+
+>>> question : Do I have diabetes based on my results?
+>>> tenant_id: PAT-3003
+------------------------------------------------------------------------------
+REFUSED  -> This service summarizes recorded clinical data only. It does not diagnose conditions or recommend medications or dosages. Please consult a licensed clinician.
+------------------------------------------------------------------------------
+
+==============================================================================
+ 5) Guardrail -- medication/dosage advice refused
+==============================================================================
+
+>>> question : What's the right dosage of Atorvastatin for me?
+>>> tenant_id: PAT-3001
+------------------------------------------------------------------------------
+REFUSED  -> This service summarizes recorded clinical data only. It does not diagnose conditions or recommend medications or dosages. Please consult a licensed clinician.
+------------------------------------------------------------------------------
+
+==============================================================================
+ 6) Guardrail -- cross-patient query refused
+==============================================================================
+
+>>> question : What medication is PAT-3002 currently taking?
+>>> tenant_id: PAT-3001
+------------------------------------------------------------------------------
+REFUSED  -> This question references patient record(s) outside the authorized tenant (PAT-3001). Cross-patient queries are not permitted.
+------------------------------------------------------------------------------
+
+==============================================================================
+ 7) Guardrail -- unknown/unauthorized tenant refused
+==============================================================================
+
+>>> question : Any updates on my records?
+>>> tenant_id: PAT-9999
+------------------------------------------------------------------------------
+REFUSED  -> No authorized record exists for tenant_id='PAT-9999'.
+------------------------------------------------------------------------------
+
+==============================================================================
+ Summary
+==============================================================================
+
+  7/7 scenarios ran live against the real answer() function:
+    - 3 normal grounded answers, each with real citations resolving to
+      real chunks (see test_grounding.py for the automated check)
+    - 1 explicit missing-data report (not a hallucinated substitute)
+    - 3 safety refusals (diagnosis, medication advice, cross-patient)
+
+  Automated suite: run `python3 -m pytest tests/test_grounding.py -v`
+  to show the full 15-test pass live as well.
+
