@@ -13,12 +13,18 @@ for the retrieval design this builds on (Week 1).
 """
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 
 from .guardrails import cross_patient_request, diagnosis_or_medication_advice
 from .retriever import Chunk, Retriever
 
 PROMPT_VERSION = "grounded-v1"
+
+_MEDICATION_QUERY_RE = re.compile(
+    r"\b(medication|medications|medicine|medicines|drug|drugs|prescription|prescriptions|prescribed|dose|dosage)\b",
+    re.IGNORECASE,
+)
 
 _retriever: Retriever | None = None
 
@@ -138,7 +144,37 @@ def answer(question: str, *, tenant_id: str) -> Answer:
             citations=[], missing=missing, refused=False, reason=None,
         )
 
-    chunks = retriever.retrieve(question, tenant_id=tenant_id, k=3, token_budget=300)
+    if _MEDICATION_QUERY_RE.search(question):
+        absent_medications = retriever.medications_absent_for_patient(question, tenant_id)
+        if absent_medications:
+            missing = [
+                f"No {medication} prescription record found for this patient."
+                for medication in absent_medications
+            ]
+            return Answer(
+                text=(
+                    "No matching prescription records were found for this patient "
+                    f"for: {', '.join(absent_medications)}. This is reported as "
+                    "missing rather than inferred from other medication records."
+                ),
+                citations=[], missing=missing, refused=False, reason=None,
+            )
+
+    # Medication questions must be answered from medication-bearing records,
+    # not whichever lab chunks happen to share the most generic words.
+    record_types = {"prescription", "encounter"} if _MEDICATION_QUERY_RE.search(question) else None
+    medication_current_state = (
+        record_types is not None
+        and any(word in question.lower() for word in ("current", "currently", "latest", "recent", "taking"))
+    )
+    chunks = retriever.retrieve(
+        question,
+        tenant_id=tenant_id,
+        k=1 if medication_current_state else 3,
+        token_budget=300,
+        record_types=record_types,
+        prefer_recent=medication_current_state,
+    )
 
     # 4) Empty retrieval -> refuse rather than let a downstream generation
     #    step invent an answer with no grounding.

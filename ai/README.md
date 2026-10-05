@@ -109,14 +109,19 @@ question, tenant_id
        │   patient's corpus -> report in `missing`, do not substitute
        │   unrelated chunks)
        ▼
-4. retriever.retrieve(question, tenant_id)
-       │  (patient_id is a mandatory PRE-ranking filter; empty -> refuse)
-       │  (date-aware re-rank for "most recent" style questions)
+4. retriever.medications_absent_for_patient(question, tenant_id)
+       │  (named medication absent from this patient's prescriptions
+       │   -> report in `missing`, do not substitute another medication)
        ▼
-5. build Citations (doc_id, chunk_id, quote_span -- a literal, exact
+5. retriever.retrieve(question, tenant_id)
+       │  (patient_id is a mandatory PRE-ranking filter; zero-match -> refuse)
+       │  (medication questions rank only prescription/encounter chunks)
+       │  (current medication questions select the newest eligible record)
+       ▼
+6. build Citations (doc_id, chunk_id, quote_span -- a literal, exact
    substring of the source chunk) + detect missing dates
        ▼
-6. Answer(text, citations, missing, refused, reason)
+7. Answer(text, citations, missing, refused, reason)
 ```
 
 ### Why a topic-absence check exists (Section 3 above)
@@ -151,8 +156,11 @@ patient's own record before trusting similarity ranking at all.
   layer, not a replacement, for these checks.
 - **Retrieval uses TF-IDF**, not a production embedding model — carried
   over from the Week 1 finding that this disadvantages lexical-mismatch
-  queries (e.g. "medication" vs. "Prescribed" in the source text). See
-  `ai/chunking-experiment.md` Section 5.
+  queries. Medication-intent queries receive a small synonym expansion and
+  are restricted to prescription/encounter records, but other lexical
+  mismatches may still return no result. Zero-similarity queries are refused
+  rather than answered with arbitrary chunks. See `ai/chunking-experiment.md`
+  Section 5.
 - **`terms_absent_for_patient` is heuristic**, built from literal
   `"Lab order: X,"` / `"Imaging order: X,"` patterns in this synthetic
   corpus. A production system needs a real controlled vocabulary of

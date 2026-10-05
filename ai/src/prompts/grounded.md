@@ -64,6 +64,11 @@ redaction step. This mirrors `isolation_policy` in `ai/index-manifest.json`.
 - If retrieval returns no chunks for an in-scope, single-patient,
   non-diagnostic question, the service refuses (`refused=True`) rather
   than generating an ungrounded answer.
+- A query with no positive lexical match is treated as out of scope and
+  refused; patient identifiers are not used as evidence of topical relevance.
+- Medication-history questions retrieve only prescription and encounter
+  records, rather than unrelated record types that happen to share common
+  words with the question.
 
 ## 5. Missing-data reporting (never inferred)
 
@@ -75,7 +80,9 @@ silently substituted or guessed:
    that does not appear anywhere in this patient's own corpus, the service
    must say so explicitly and must **not** fall back to presenting
    unrelated records as if they answered the question — even if those
-   unrelated records rank as "similar" under text-similarity search.
+   unrelated records rank as "similar" under text-similarity search. The
+   same rule applies when a named medication has no prescription for this
+   patient; another medication must not be substituted.
 2. **Unreliable or absent dates.** If a selected chunk has no reliable
    date, or the question asks for the "most recent" record and no
    candidate chunk has a usable date, this is reported in `missing`.
