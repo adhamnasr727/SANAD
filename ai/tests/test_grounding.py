@@ -45,13 +45,22 @@ def test_citations_resolve_to_real_chunks():
             "quote_span must be a literal, exact substring of the cited chunk's text"
 
 
-def test_citation_patient_matches_tenant():
+@pytest.mark.parametrize("patient_id", KNOWN_PATIENTS)
+def test_medication_query_returns_latest_tenant_medication_record(patient_id):
     """A citation must never resolve to a chunk belonging to a different patient."""
-    a = answer(f"What medication is {PATIENT_A} currently taking?", tenant_id=PATIENT_A)
+    a = answer(f"What medication is {patient_id} currently taking?", tenant_id=patient_id)
     assert not a.refused
+    assert a.citations
+    patient_medication_chunks = [
+        chunk for chunk in retriever._chunks
+        if chunk.patient_id == patient_id and chunk.record_type in {"prescription", "encounter"}
+    ]
+    latest_date = max(chunk.date for chunk in patient_medication_chunks if chunk.date)
     for cite in a.citations:
         chunk = _chunk_by_id(cite.chunk_id)
-        assert chunk.patient_id == PATIENT_A
+        assert chunk.patient_id == patient_id
+        assert chunk.record_type in {"prescription", "encounter"}
+        assert chunk.date == latest_date
 
 
 # ---------------------------------------------------------------------
@@ -64,6 +73,24 @@ def test_empty_retrieval_is_refused():
     assert a.reason
     assert a.text == ""
     assert a.citations == []
+
+
+def test_out_of_scope_question_is_refused_without_patient_records():
+    a = answer(f"What is the weather tomorrow for {PATIENT_A}?", tenant_id=PATIENT_A)
+    assert a.refused is True
+    assert a.reason
+    assert a.text == ""
+    assert a.citations == []
+
+
+def test_absent_named_medication_is_reported_missing_not_substituted():
+    a = answer(
+        "What is the latest Metformin prescription?",
+        tenant_id="PAT-3001",
+    )
+    assert a.refused is False
+    assert a.citations == []
+    assert any("metformin" in item.lower() for item in a.missing)
 
 
 def test_specifically_absent_test_is_reported_missing_not_substituted():
@@ -104,6 +131,7 @@ def test_missing_date_is_reported_when_present_in_corpus():
 # ---------------------------------------------------------------------
 @pytest.mark.parametrize("question", [
     "Do I have diabetes?",
+    "Could these results mean I have diabetes?",
     "What medication should I take for my chest pain?",
     "Can you diagnose what's wrong with me?",
     "Should I increase my Metformin dose?",

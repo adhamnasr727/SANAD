@@ -30,6 +30,7 @@ SECTION_RE = re.compile(r"^##\s+(?P<type>[A-Za-z /]+?)\s+--\s+(?P<date>\d{4}-\d{
 RECORD_TYPE_MAP = {"laboratory_result": "lab_result"}  # align with data-dictionary.csv
 
 RECENCY_WORDS = ("recent", "latest", "current", "last", "newest", "most up to date", "up-to-date")
+PATIENT_ID_RE = re.compile(r"\bPAT-\d+\b", re.IGNORECASE)
 
 # "Lab order: X" / "Imaging order: X" -- used to build a corpus-wide
 # vocabulary of known test/imaging names, so the service can tell the
@@ -37,6 +38,7 @@ RECENCY_WORDS = ("recent", "latest", "current", "last", "newest", "most up to da
 # asked about but this patient has none on record" (see
 # Retriever.terms_absent_for_patient).
 _TEST_NAME_RE = re.compile(r"(?:Lab order|Imaging order):\s*([^,]+?),")
+_MEDICATION_NAME_RE = re.compile(r"Prescribed by [^:]+:\s*([^,\d]+?)\s+\d", re.IGNORECASE)
 
 
 @dataclass
@@ -107,9 +109,20 @@ class Retriever:
         # one on record -- built once at load time.
         self._known_test_names: set[str] = set()
         self._patient_text: dict[str, str] = {}
+        self._patient_medications: dict[str, set[str]] = {}
         for c in self._chunks:
             self._patient_text.setdefault(c.patient_id, "")
             self._patient_text[c.patient_id] += " " + c.text
+            if c.record_type == "prescription":
+                match = _MEDICATION_NAME_RE.search(c.text)
+                if match:
+                    self._patient_medications.setdefault(c.patient_id, set()).add(
+                        match.group(1).strip().lower()
+                    )
+        self._known_medications = {
+            name for medications in self._patient_medications.values()
+            for name in medications
+        }
         for text in self._patient_text.values():
             for m in _TEST_NAME_RE.finditer(text):
                 self._known_test_names.add(m.group(1).strip())
@@ -136,25 +149,69 @@ class Retriever:
                 absent.append(name)
         return absent
 
-    def retrieve(self, question: str, tenant_id: str, k: int = 3, token_budget: int = 300) -> list[Chunk]:
+    def medications_absent_for_patient(self, question: str, tenant_id: str) -> list[str]:
+        """Return corpus-known medication names requested but absent from
+        this patient's own prescription records."""
+        question_lower = question.lower()
+        patient_medications = self._patient_medications.get(tenant_id, set())
+        return sorted(
+            name for name in self._known_medications
+            if re.search(rf"\b{re.escape(name)}\b", question_lower)
+            and name not in patient_medications
+        )
+
+    def retrieve(
+        self,
+        question: str,
+        tenant_id: str,
+        k: int = 3,
+        token_budget: int = 300,
+        record_types: set[str] | None = None,
+        prefer_recent: bool = False,
+    ) -> list[Chunk]:
         """Mandatory pre-ranking filter on tenant_id, then TF-IDF similarity,
-        then date-aware re-ranking if the question asks for something recent."""
-        idxs = [i for i, c in enumerate(self._chunks) if c.patient_id == tenant_id]
+        then date-aware re-ranking if the question asks for something recent.
+        Optional record_types keeps explicitly targeted questions grounded in
+        records capable of answering them. prefer_recent ranks all eligible
+        records by date before limiting the result count."""
+        idxs = [
+            i for i, c in enumerate(self._chunks)
+            if c.patient_id == tenant_id
+            and (record_types is None or c.record_type in record_types)
+        ]
         if not idxs:
             return []
 
-        q_vec = self._vectorizer.transform([question])
+        # Patient IDs identify the tenant but are not evidence of topical
+        # relevance; including them can make an unrelated query match every
+        # chunk in that patient's timeline.
+        retrieval_query = PATIENT_ID_RE.sub(" ", question)
+        if record_types is not None and "prescription" in record_types:
+            retrieval_query += " prescribed prescription"
+        q_vec = self._vectorizer.transform([retrieval_query])
         sims = cosine_similarity(q_vec, self._matrix[idxs]).flatten()
-        ranked = sorted(zip(idxs, sims), key=lambda x: -x[1])
-
-        if any(w in question.lower() for w in RECENCY_WORDS):
-            shortlist = ranked[:8]
-            dated = sorted(
-                [(i, s) for i, s in shortlist if self._chunks[i].date],
-                key=lambda x: self._chunks[x[0]].date, reverse=True,
+        if prefer_recent:
+            ranked = list(zip(idxs, sims))
+            ranked.sort(
+                key=lambda x: self._chunks[x[0]].date or "",
+                reverse=True,
             )
-            undated = [(i, s) for i, s in shortlist if not self._chunks[i].date]
-            ranked = dated + undated
+        else:
+            ranked = sorted(
+                ((i, score) for i, score in zip(idxs, sims) if score > 0),
+                key=lambda x: -x[1],
+            )
+            if not ranked:
+                return []
+
+            if any(w in question.lower() for w in RECENCY_WORDS):
+                shortlist = ranked[:8]
+                dated = sorted(
+                    [(i, s) for i, s in shortlist if self._chunks[i].date],
+                    key=lambda x: self._chunks[x[0]].date, reverse=True,
+                )
+                undated = [(i, s) for i, s in shortlist if not self._chunks[i].date]
+                ranked = dated + undated
 
         selected, used = [], 0
         for i, _ in ranked:
